@@ -1,0 +1,129 @@
+body {
+  display: flex;
+  flex-shrink: 3;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: #091921;
+  overflow-x: hidden;
+}
+.clocks {
+  width: 270px;
+  height: 270px;
+  margin: 20px;
+  position: relative;
+  background: url(/resources/media/clock.png);
+  background-size: cover;
+  border: 4px solid #091921;
+  border-radius: 50%;
+  box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05),
+    inset 0 -15px 15px rgba(255, 255, 255, 0.05), 0 15px 15px rgba(0, 0, 0, 3),
+    inset 0 15px 15px rgba(0, 0, 0, 3);
+}
+.clocks::before {
+  content: "";
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+  background: white;
+  transform: translateX(40%) translateY(-50%);
+  z-index: 10;
+}
+
+.clocks .hours,
+.clocks .minutes,
+.clocks .seconds {
+  position: absolute;
+}
+
+.clocks .hours,
+.hr {
+  width: 270px;
+  height: 270px;
+}
+.clocks .minutes,
+.min {
+  width: 270px;
+  height: 270px;
+}
+.clocks .seconds,
+.sec {
+  width: 270px;
+  height: 270px;
+}
+
+.hr,
+.min,
+.sec {
+  display: flex;
+  justify-content: center;
+  transform-origin: center center;
+}
+
+.hr::before {
+  content: "";
+  position: absolute;
+  right: 50%;
+  bottom: 50%;
+  width: 9px;
+  height: 70px;
+  background: #e94b3cff;
+  z-index: 2;
+  border-radius: 4px;
+  transform: translateX(40%) translateY(7%);
+}
+
+.min::before {
+  content: "";
+  position: absolute;
+  right: 49%;
+  bottom: 50%;
+  width: 7px;
+  height: 90px;
+  background: #f2aa4cff;
+  z-index: 3;
+  border-radius: 4px;
+}
+.sec::before {
+  content: "";
+  position: absolute;
+  right: 50%;
+  bottom: 50%;
+  width: 3px;
+  height: 100px;
+  background: #fee715ff;
+  z-index: 4;
+  border-radius: 4px;
+  transform: translateX(25%) translateY(0%);
+}
+
+h1,
+h2 {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a, 0 4px 0 #282828, 0 5px 0 #262626, 0 6px 0 #242424, 0 7px 0 #222, 0 8px 0 #202020, 0 9px 0 #1e1e1e, 0 10px 0 #1c1c1c, 0 11px 0 #1a1a1a, 0 12px 0 #181818, 0 13px 0 #161616, 0 14px 0 #141414, 0 15px 0 #121212, 0 22px 30px rgba(0,0,0,0.9);
+  color: #e0dfdc;
+}
+.major-hours {
+  display: flex;
+  justify-content: space-around;
+  width: 70%;
+}
+@media (max-width: 1000px) {
+  body {
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    overflow-x: hidden;
+  }
+  .major-hours {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+  }
+}
