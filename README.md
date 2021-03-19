@@ -5,3 +5,5 @@ I made this because before I tried to trade forex and I always forgot the most a
 Next update, maybe I will put am and pm for relative hours. I still figure out how to put it.
 
 Cheers.
+
+[Go live](https://mirzafahmi.github.io/Major-trading-hour-clock/) 
